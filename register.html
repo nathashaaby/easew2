@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+          background-image: linear-gradient( rgb(151, 237, 188) , white , rgb(241, 234, 177));
+         
+          background-position: 50%;
+            background-size:2000px 2000px;}
+        </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="login">
+        <p id="text">Log In to EaSew</p>
+        <input id="uname" type="text" placeholder="Username"><br>
+        <input id="pswd" type="password" placeholder="Password"><br> <br>
+        <button class="buton" id="submit">Register</button><br> <br>
+        <a style="margin-left: 8rem;" id="forgotten" href="./login.html">Already a Member ? </a>&nbsp;
+        
+    </div>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+    import {getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyCfspYWCcGjpLa5o1U6oLXMpHWr9rpZqo8",
+    authDomain: "easew-3d8a9.firebaseapp.com",
+    projectId: "easew-3d8a9",
+    storageBucket: "easew-3d8a9.appspot.com",
+    messagingSenderId: "1091930729616",
+    appId: "1:1091930729616:web:4dcb77c1fd9362e8d37c15",
+    measurementId: "G-S6FWXRWSLT"
+  };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+    const auth = getAuth();
+    submit.addEventListener('click',(e) => {
+      
+      var email= document.getElementById('uname').value
+      var password= document.getElementById('pswd').value
+  
+      createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      
+      set(ref(database,'users/' + user.uid),{
+        email:email,
+      })
+      alert('USER CREATED')
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+      alert(errorMessage)
+    });
+  
+    })
+  </script>
+</html>

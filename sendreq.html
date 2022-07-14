@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+            body {
+              background-image: linear-gradient( rgb(106, 255, 170) , white , rgb(241, 234, 177));
+              
+              background-repeat: no-repeat;
+              background-position: 50%;
+                background-size:1550px 1550px;}
+            </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Request</title>
+</head>
+<body>
+    <div id="Newreq" class="container">
+        <h1 id="h1"><i>Send a new request</i></h1>
+        <p id="p1">Please fill in this form to send a new request.</p>
+        
+    <div id="p2">
+        <label  id="sendreq" for="dtype">Dress Type</label><br>
+        <input   id="sendreq2"  placeholder="Frock, shirt etc" type="text"  required><br>  <br>
+    
+        <label id="sendreq" for="material">Material</label><br>
+        <input id="sendreq2"  placeholder=" Georgette,nylon etc" type="text"  required><br>  <br>
+
+        <input type="checkbox" id="matrialpresence" name="style1" class="radio" value="1">
+        <label for="style1">Without material</label><br>
+
+        <input type="checkbox" id="matrialpresence" name="style1" class="radio" value="1">
+        <label  for="style1">With material</label><br> <br>
+    
+        <label  id="sendreq"for="exprate">Expected Rate</label><br>
+        <input id="sendreq2" type="number" min="0.00" max="10000.00" placeholder="Rate"  required><br>  <br>
+
+        <label id="sendreq" for="expdate">Expected Date</label><br>
+        <input id="sendreq2" type="date" required><br>  <br>
+
+        <input  id="sendreq" type="file" id="upload" name="filename"><br> <br>
+        <button id="sendreqbtn">Send Request</button><br> <br>
+      </div>
+      </div>
+</body>
+</html>
