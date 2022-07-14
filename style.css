@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar-style
+{
+  box-shadow: 0 5px 10px #efefef;
+}  
+.logo
+{
+  height: 80px;
+}
+.cont
+{
+  margin-top: 150px;
+}
+.row
+{
+  background-color: lightskyblue;
+  border-radius: 30px;
+}
+#welcomeimg
+{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.btn1
+{
+  margin-bottom: 100px;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  color: steelblue;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.btn1:hover
+{
+  background: darkblue;
+  border: 1px solid;
+  color: white;
+}
+.navbar-md
+{
+  background-color: black;
+}
+.logo2
+{
+  height: 50px;
+}
+#EASEW
+{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+#EASEW:hover
+{
+  color: lightskyblue;
+}
+#Row
+{
+  background-color: grey;
+  border-radius: 25px;
+  opacity: 80%;
+}
+.homePage h1{
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 50px;
+}
+.homePage p{
+  font-size: 2em;
+  font-weight: 500;
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+#reqButton
+{
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 30px;
+}
